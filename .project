@@ -14,4 +14,21 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/_02_my_first_swing_gui/chrome.png</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/chrome.png</locationURI>
+		</link>
+		<link>
+			<name>src/_03_photo_quiz/chrome.png</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/chrome.png</locationURI>
+		</link>
+		<link>
+			<name>src/_03_photo_quiz/download.png</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/download.png</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
