@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 public class JackInTheBox implements MouseListener {
 	JButton leftButton;
 	int x=0;
+	int buttoncount=0;
 	//1. Create a user interface (GUI) that has a single button labeled "Surprise".
     //If you need help, take a look at the instructions for the Fortune Cookie recipe.
 public static void main(String[] args) {
@@ -23,17 +24,18 @@ public static void main(String[] args) {
 	j.JackInThe();
 }
 //2. When the user presses the button 5 times, show them a jack-in-the-box using the methods below.
+	
 //(A sample jackInTheBox.png file is provided in the default package)
+@SuppressWarnings("deprecation")
 public void JackInThe(){
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-	 leftButton = new JButton();
+	frame.add(panel);
+	leftButton = new JButton();
+	panel.add(leftButton);
+	frame.pack();
 	frame.setVisible(true);	
 	leftButton.addMouseListener(this);
-	
-
-
-
 
 }
 
@@ -71,6 +73,7 @@ private JLabel createLabelImage(String fileName) {
 }
 
 //3. Also play a sound when the jack-in-the-box pops up using this method.
+
 //(A sample sound homer-woohoo.wav is provided in the default package)
 private void playSound(String soundFile) {
     try {
@@ -90,7 +93,11 @@ public void mousePressed(MouseEvent e) {
 	// TODO Auto-generated method stub
 	JButton buttonPressed = (JButton) e.getSource();
 	if(buttonPressed==leftButton) {
-		x+1 = ;
+		x+= 1;
+	if ( x == 5){
+		showPicture("Jack.jpg");
+		playSound("homer-woohoo.wav");
+	}
 	}
 }
 @Override
