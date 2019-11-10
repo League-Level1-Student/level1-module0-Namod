@@ -1,29 +1,41 @@
 int x;
 int y;
-
+int z = (int) random(width);
+int score;
+void checkCatch(int x){
+     if (x > mouseX && x < mouseX+100)
+          score++;
+     else if (score > 0)
+          score--;
+     println("Your score is now: " + score); }
 void setup(){
 size(600,600);
 
 }
 
 void draw(){
- x++;
- y++;
-int z = (int) random(width);
-int w = (int) random(width);
+background(#E5D94F);
 
+  fill(#4468E8);
+stroke(#1441DE);
 
-
-
-background(#47474B);
-fill(#0308FC);
-stroke(#0308FC);
-ellipse(x, y, z, w);
-
-if( x>599 & y >599){
-x=0;
-y=0;
-x++;
-y++;
+y+=10;
+ellipse(z,y,50,50);
+if(y>=600){
+  y=0;
+  y+=50;
+  z = (int) random(width);
+ellipse(z,y,50,50);
+stroke(#1746E8);
 }
+rect(mouseX,500,100,100);
+stroke(#BFBEB9);
+if(y == 450){
+  checkCatch(z);
+}
+  
+fill(0, 0, 0);
+textSize(16);
+text("Score: " + score, 20, 20);
+
 }
