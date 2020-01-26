@@ -25,8 +25,7 @@ if(y>=600){
   y=0;
   y+=50;
   z = (int) random(width);
-ellipse(z,y,50,50);
-stroke(#1746E8);
+
 }
 rect(mouseX,500,100,100);
 stroke(#BFBEB9);
